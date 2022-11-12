@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block titulo %} Miembros de Familia {% endblock %}
+
+{% block contenido %}
+
+<div class="card">
+    <div class="card-header">
+        Listar Familia
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Familia</h4>
+        <div class="table-responsive">
+            <table class="table table-primary">
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">Parentesco</th>
+                        <th scope="col">Edad</th>
+                        <th scope="col">Fecha de Nacimiento</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Profesión</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    {% for familia in familias %}
+                    <tr class="">
+                        <td>{{ familia.nombre }}</td>
+                        <td>{{ familia.apellido }}</td>
+                        <td>{{ familia.relacion }}</dh>
+                        <td>{{ familia.edad }}</td>
+                        <td>{{ familia.fecha_de_nacimiento }}</td>
+                        <td>{{ familia.email }}</td>
+                        <td>{{ familia.profesion }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        
+
+    </div>
+    <div class="card-footer text-muted">
+        
+    </div>
+</div>
+
+{% endblock %}
